@@ -142,6 +142,7 @@ const MobileMenu = () => {
         <Link
           href="mailto: christine.e.contreras@gmail.com?subject = Job Opportunity"
           underline="always"
+          color="secondary"
         >
           christine.e.contreras@gmail.com
         </Link>

@@ -10,6 +10,7 @@ const Navigation = () => {
       space={2}
       p={2}
       container
+      item
       alignItems="center"
       justifyContent="space-between"
     >

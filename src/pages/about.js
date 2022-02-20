@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby-theme-material-ui"
-import { Container, Box, Typography } from "@mui/material"
-import Layout from "../containers/layout"
+import Layout from "../containers/Layout"
 import Seo from "../components/seo"
 
 export default function App() {

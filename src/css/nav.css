@@ -4,7 +4,11 @@
   list-style-type: none;
 }
 
-.nav-mobile .logo {
+.MuiLink-root.logo {
+  color: #fff;
+}
+
+.nav-mobile .MuiLink-root.logo {
   position: absolute;
   top: 2%;
   left: 2%;

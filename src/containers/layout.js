@@ -8,16 +8,38 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { RecoilRoot } from "recoil"
+import "../css/layout.css"
+
+import { Grid } from "@mui/material"
 import Navigation from "./Navigation"
 import Footer from "../components/footer/Footer"
-import "../css/layout.css"
 
 const Layout = ({ children }) => {
   return (
     <RecoilRoot>
-      <Navigation />
-      <main>{children}</main>
-      <Footer />
+      <Grid
+        container
+        flexDirection="column"
+        sx={{ height: "100vh" }}
+        justifyContent="space-between"
+      >
+        <Navigation />
+
+        <Grid
+          item
+          flexGrow={1}
+          sx={{
+            "& main": {
+              height: "100%",
+            },
+          }}
+        >
+          <main>{children}</main>
+        </Grid>
+        <Grid item>
+          <Footer />
+        </Grid>
+      </Grid>
     </RecoilRoot>
   )
 }

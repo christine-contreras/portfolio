@@ -5,11 +5,11 @@ export const menuItemsAtom = atom({
   default: [
     {
       name: "Projects",
-      url: "#",
+      url: "/projects",
     },
     {
       name: "About",
-      url: "#",
+      url: "/about",
     },
     {
       name: "Contact",

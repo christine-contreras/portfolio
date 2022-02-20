@@ -1,15 +1,13 @@
 import React from "react"
-
+import { Grid, Typography } from "@mui/material"
 const Footer = () => {
   return (
-    <footer
-      style={{
-        marginTop: `2rem`,
-      }}
-    >
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.com">Gatsby</a>
+    <footer>
+      <Grid container alignItems="center" justifyContent="center">
+        <Typography>
+          Copyright &copy; Christine Contreras {new Date().getFullYear()}
+        </Typography>
+      </Grid>
     </footer>
   )
 }

@@ -1,13 +1,11 @@
 import React from "react"
 import { Link } from "gatsby-theme-material-ui"
-import { Container, Box, Typography } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
-import Layout from "../containers/layout"
-import Seo from "../components/seo"
+import Layout from "../containers/Layout"
 export default function App() {
   return (
     <Layout>
-      <Seo title="Home" />
+      {/* <Seo title="Home" /> */}
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
