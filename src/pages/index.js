@@ -1,13 +1,19 @@
 import React from "react"
 import "../css/home.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+
 import Layout from "../containers/Layout"
 import Hero from "../components/home/Hero"
 export default function App() {
   return (
     <Layout>
-      {/* <Seo title="Home" /> */}
-      <Hero />
+      <Parallax pages={2}>
+        <ParallaxLayer offset={0} speed={2.5}>
+          <Hero />
+        </ParallaxLayer>
+      </Parallax>
+
       {/* <StaticImage
         src="../images/gatsby-astronaut.png"
         width={300}
