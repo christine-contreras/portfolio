@@ -32,12 +32,14 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
     h1: {
-      fontSize: "4em",
+      fontSize: "6em",
       "@media (max-width:600px)": {
-        fontSize: "3em",
+        fontSize: "4em",
       },
       fontFamily: ["Karla", "sans-serif"].join(","),
       fontWeight: 700,
+      letterSpacing: -2,
+      lineHeight: 0.9,
     },
     h2: {
       fontSize: "3.5em",
@@ -46,6 +48,8 @@ const theme = createTheme({
       },
       fontFamily: ["Karla", "sans-serif"].join(","),
       fontWeight: 700,
+      letterSpacing: -2,
+      lineHeight: 0.9,
     },
     h3: {
       fontSize: "3em",
@@ -54,6 +58,8 @@ const theme = createTheme({
       },
       fontFamily: ["Karla", "sans-serif"].join(","),
       fontWeight: 700,
+      letterSpacing: -2,
+      lineHeight: 0.9,
     },
     h4: {
       fontSize: "2.5em",
@@ -62,6 +68,18 @@ const theme = createTheme({
       },
       fontFamily: ["Karla", "sans-serif"].join(","),
       fontWeight: 700,
+      letterSpacing: -2,
+      lineHeight: 0.9,
+    },
+    h5: {
+      fontSize: "2em",
+      "@media (max-width:600px)": {
+        fontSize: "1.75em",
+      },
+      fontFamily: ["Karla", "sans-serif"].join(","),
+      fontWeight: 700,
+      letterSpacing: -2,
+      lineHeight: 0.9,
     },
     subtitle1: {
       fontSize: "1.25em",

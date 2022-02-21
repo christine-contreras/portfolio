@@ -7,3 +7,12 @@
 .MuiGrid-container {
   margin: auto;
 }
+
+.MuiButton-root.btn {
+  font-weight: bold;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+}

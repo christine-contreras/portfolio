@@ -7,6 +7,8 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@react-spring/parallax": "^9.4.3",
+    "@rooks/use-visibility-sensor": "^4.11.2",
     "framer-motion": "^6.2.6",
     "gatsby": "latest",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
