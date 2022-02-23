@@ -14,8 +14,28 @@ const Path = props => (
 
 const MobileMenuButton = () => {
   const setToggleMenu = useSetRecoilState(toggleMenuOpenAtom)
+  const btn = {
+    open: {
+      top: "2%",
+      right: "2%",
+      transition: {
+        type: "spring",
+        duration: 0.5,
+      },
+    },
+    closed: {
+      top: "27%",
+      right: "15%",
+      transition: {
+        delay: 1,
+        type: "spring",
+        duration: 0.5,
+      },
+    },
+  }
+
   return (
-    <button onClick={setToggleMenu} className="menu-btn">
+    <motion.button onClick={setToggleMenu} className="menu-btn" variants={btn}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{
@@ -38,7 +58,7 @@ const MobileMenuButton = () => {
           }}
         />
       </svg>
-    </button>
+    </motion.button>
   )
 }
 

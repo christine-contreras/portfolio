@@ -8,6 +8,17 @@
   color: #fff;
 }
 
+.MuiLink-root.logo .lg,
+.nav-mobile .logo .lg {
+  font-size: 1.5em;
+  font-family: "Tan Buster";
+  padding-left: 7px;
+}
+
+/* .MuiLink-root.logo .lg {
+  color: #f50057;
+} */
+
 .nav-mobile .MuiLink-root.logo {
   position: absolute;
   top: 2%;
@@ -17,17 +28,23 @@
 }
 
 .nav-mobile {
-  width: 100vw;
-  height: 100vh;
-  left: 0;
+  width: 50px;
+  height: 50px;
+  left: unset;
   right: 0;
   top: 0;
   bottom: 0;
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.nav-mobile.open {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 
 .menu-background,
@@ -35,53 +52,32 @@
 .nav-mobile .social {
   z-index: 10;
 }
-
 .menu-background {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f9e9dd;
+  background-color: #fffdf3;
   top: 0;
   right: 0;
+}
+
+.nav-mobile.open .menu-background {
+  width: 100vw;
+  height: 100vh;
 }
 
 button.menu-btn {
   outline: none;
   border: none;
   cursor: pointer;
-  border-radius: 50%;
   background: transparent;
   position: absolute;
-  right: 2%;
   z-index: 20;
-  top: 2%;
+  top: 27%;
+  right: 15%;
 }
 
 li.MuiMenuItem-root:hover,
 li.MuiMenuItem-root:active {
   background-color: transparent;
-}
-
-@media (min-width: 500px) {
-  button.menu-btn {
-    right: 3%;
-  }
-}
-
-@media (min-width: 500px) {
-  button.menu-btn {
-    right: 3.5%;
-  }
-}
-
-@media (min-width: 600px) {
-  button.menu-btn {
-    right: 4%;
-  }
-}
-
-@media (min-width: 700px) {
-  button.menu-btn {
-    right: 4.5%;
-  }
 }

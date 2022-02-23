@@ -41,10 +41,7 @@ const MobileSocial = () => {
           transition: { duration: 0.5 },
         }}
       >
-        <Link
-          href="https://www.linkedin.com/in/christinecontreras/"
-          color="secondary"
-        >
+        <Link href="https://www.linkedin.com/in/christinecontreras/">
           <LinkedInIcon />
         </Link>
       </MenuItem>
@@ -58,7 +55,7 @@ const MobileSocial = () => {
           transition: { duration: 0.5 },
         }}
       >
-        <Link href="https://github.com/christine-contreras" color="secondary">
+        <Link href="https://github.com/christine-contreras">
           <GitHubIcon />
         </Link>
       </MenuItem>

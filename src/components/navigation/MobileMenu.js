@@ -12,16 +12,38 @@ import MobileSocial from "./MobileSocial"
 const MobileMenu = () => {
   const menuOpen = useRecoilValue(menuOpenAtom)
   const menuItems = useRecoilValue(menuItemsAtom)
-  const menuBackground = {
+  // const menuBackground = {
+  //   open: {
+  //     clipPath: "circle(200% at 93% 3%)",
+  //     transition: {
+  //       type: "spring",
+  //       duration: 2,
+  //     },
+  //   },
+  //   closed: {
+  //     clipPath: "circle(4% at 93% 3%)",
+  //     transition: {
+  //       delay: 1,
+  //       type: "spring",
+  //       duration: 0.5,
+  //     },
+  //   },
+  // }
+
+  const mobileNav = {
     open: {
-      clipPath: "circle(200% at 93% 3%)",
+      position: "absolute",
+      width: "100vw",
+      height: "100vh",
       transition: {
         type: "spring",
-        duration: 2,
+        duration: 0.5,
       },
     },
     closed: {
-      clipPath: "circle(2.9% at 93% 3%)",
+      position: "relative",
+      width: 50,
+      height: 50,
       transition: {
         delay: 1,
         type: "spring",
@@ -30,16 +52,19 @@ const MobileMenu = () => {
     },
   }
 
-  const logo = {
+  const menuBackground = {
     open: {
-      opacity: 1,
+      borderRadius: 0,
       transition: {
-        duration: 0.5,
+        type: "spring",
+        duration: 1,
       },
     },
     closed: {
-      opacity: 0,
+      borderRadius: "50%",
       transition: {
+        delay: 1,
+        type: "spring",
         duration: 0.5,
       },
     },
@@ -90,7 +115,8 @@ const MobileMenu = () => {
     <motion.div
       initial={false}
       animate={menuOpen ? "open" : "closed"}
-      className="nav-mobile"
+      className={menuOpen ? "nav-mobile open" : "nav-mobile"}
+      variants={mobileNav}
     >
       <motion.div variants={list}>
         <Logo />
@@ -114,10 +140,8 @@ const MobileMenu = () => {
             <Link to={item.url} className="nav-link" underline="none">
               <Typography
                 component="span"
-                variant="mobileLinks"
+                variant="h1"
                 sx={{
-                  color: "background.default",
-                  fontWeight: 700,
                   fontSize: "4em",
                 }}
               >
@@ -142,7 +166,6 @@ const MobileMenu = () => {
         <Link
           href="mailto: christine.e.contreras@gmail.com?subject = Job Opportunity"
           underline="always"
-          color="secondary"
         >
           christine.e.contreras@gmail.com
         </Link>

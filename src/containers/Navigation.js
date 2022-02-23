@@ -13,6 +13,7 @@ const Navigation = () => {
       item
       alignItems="center"
       justifyContent="space-between"
+      sx={{ position: "sticky" }}
     >
       <Logo />
       <Grid item xs="auto" sx={{ display: { xs: "flex", md: "none" } }}>

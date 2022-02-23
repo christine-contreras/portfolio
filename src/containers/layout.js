@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <Grid
         container
         flexDirection="column"
-        sx={{ height: "100vh" }}
+        // sx={{ height: "100vh" }}
         justifyContent="space-between"
       >
         <Navigation />
@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
           item
           flexGrow={1}
           sx={{
+            zIndex: -1,
             "& main": {
               height: "100%",
             },
@@ -36,9 +37,9 @@ const Layout = ({ children }) => {
         >
           <main>{children}</main>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Footer />
-        </Grid>
+        </Grid> */}
       </Grid>
     </RecoilRoot>
   )

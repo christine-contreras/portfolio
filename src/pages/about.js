@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 export default function App() {
   return (
     <Layout>
-      <Seo title="Page two" />
+      <Seo title="About Me" />
       <h1>Hi from the second page</h1>
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>

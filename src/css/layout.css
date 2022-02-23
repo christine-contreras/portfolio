@@ -1,10 +1,17 @@
+@font-face {
+  font-family: "Tan Buster";
+  src: local("Tan Buster"), url(../fonts/TAN-BUSTER.woff2) format("woff2");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.MuiGrid-container {
+.m-auto {
   margin: auto;
 }
 
@@ -15,4 +22,23 @@
   -moz-border-radius: 32px;
   -ms-border-radius: 32px;
   -o-border-radius: 32px;
+}
+
+.text-shadow {
+  text-shadow: -5px 2px 0px #c3574e;
+}
+
+.radius {
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+}
+
+.h1,
+.h1.btn {
+  color: #fff;
+  font-family: "Tan Buster";
+  text-transform: none;
 }
