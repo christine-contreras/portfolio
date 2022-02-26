@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { ParallaxLayer } from "@react-spring/parallax"
-import { StaticImage } from "gatsby-plugin-image"
-import { Grid, Typography, Paper, Container } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
+import { useSpring, animated, config } from "react-spring"
+import useVisibilitySensor from "@rooks/use-visibility-sensor"
 import ProjectPreview from "../components/home/ProjectPreview"
 const ProjectPreviews = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +31,18 @@ const ProjectPreviews = () => {
 
   const projects = data.allMarkdownRemark.nodes
 
-  console.log(projects)
+  const projectTitleNode = React.useRef(null)
+  const { isVisible, visibilityRect } = useVisibilitySensor(projectTitleNode, {
+    intervalCheck: true,
+    scrollCheck: true,
+    resizeCheck: true,
+  })
+  console.log(isVisible)
+  const titleProps = useSpring({
+    config: config.molasses,
+    to: { opacity: isVisible ? 1 : 0, y: isVisible ? "0" : "-20%" },
+  })
+
   return (
     <>
       <Grid
@@ -41,10 +52,16 @@ const ProjectPreviews = () => {
         justifyContent="center"
         sx={{ position: "relative", backgroundColor: "#dfafad", pt: 10 }}
       >
-        <Grid item sx={{ position: "sticky", top: "20%", pt: 6 }}>
+        <Grid
+          item
+          sx={{ position: "sticky", top: "20%", pt: 6 }}
+          ref={projectTitleNode}
+        >
           <Typography
             variant="h1"
             className="text-shadow"
+            component={animated.h2}
+            style={titleProps}
             sx={{
               fontSize: { lg: "6em" },
             }}
