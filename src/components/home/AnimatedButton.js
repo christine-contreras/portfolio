@@ -3,8 +3,7 @@ import { Button } from "@mui/material"
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 import { useSpring, animated, config } from "react-spring"
 
-const AnimatedButton = () => {
-  const [hover, setHover] = React.useState(false)
+const AnimatedButton = ({ isVisible }) => {
   const styles = useSpring({
     config: config.molasses,
     loop: true,

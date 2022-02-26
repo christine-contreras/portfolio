@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material"
-
+import { grey } from "@mui/material/colors"
 // A custom theme for this app
 const theme = createTheme({
   palette: {
@@ -91,8 +91,9 @@ const theme = createTheme({
     },
     subtitle1: {
       fontSize: "1.25em",
-      fontWeight: 700,
+      color: grey[700],
       fontFamily: ["Karla", "sans-serif"].join(","),
+      textTransform: "uppercase",
     },
     subtitle2: {
       fontSize: ".9em",

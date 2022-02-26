@@ -23,8 +23,9 @@ const Hero = () => {
     delay: 200,
   })
   return (
-    <>
+    <Grid container className="flex" sx={{ height: "100vh" }}>
       <Grid
+        item
         container
         flexDirection="column"
         sx={{ p: 3 }}
@@ -81,12 +82,12 @@ const Hero = () => {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
 
-      <Grid container alignItems="center" justifyContent="center">
-        <AnimatedButton />
+        <Grid item className="flex" component={animated.div} style={textProps}>
+          <AnimatedButton />
+        </Grid>
       </Grid>
-    </>
+    </Grid>
   )
 }
 
