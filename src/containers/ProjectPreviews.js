@@ -37,7 +37,6 @@ const ProjectPreviews = () => {
     scrollCheck: true,
     resizeCheck: true,
   })
-  console.log(isVisible)
   const titleProps = useSpring({
     config: config.molasses,
     to: { opacity: isVisible ? 1 : 0, y: isVisible ? "0" : "-20%" },

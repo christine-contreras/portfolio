@@ -17,15 +17,15 @@ import Footer from "../components/footer/Footer"
 const Layout = ({ children }) => {
   return (
     <RecoilRoot>
-      <Grid
+      {/* <Grid
         container
         flexDirection="column"
         // sx={{ height: "100vh" }}
         justifyContent="space-between"
-      >
-        <Navigation />
+      > */}
+      <Navigation />
 
-        <Grid
+      {/* <Grid
           item
           flexGrow={1}
           sx={{
@@ -34,13 +34,13 @@ const Layout = ({ children }) => {
               height: "100%",
             },
           }}
-        >
-          <main>{children}</main>
-        </Grid>
-        {/* <Grid item>
+        > */}
+      <main>{children}</main>
+      {/* </Grid> */}
+      {/* <Grid item>
           <Footer />
         </Grid> */}
-      </Grid>
+      {/* </Grid> */}
     </RecoilRoot>
   )
 }
