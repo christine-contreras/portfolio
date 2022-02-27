@@ -12,7 +12,7 @@ import "../css/layout.css"
 
 import { Grid } from "@mui/material"
 import Navigation from "./Navigation"
-import Footer from "../components/footer/Footer"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
         > */}
       <main>{children}</main>
       {/* </Grid> */}
+      <Footer />
       {/* <Grid item>
           <Footer />
         </Grid> */}

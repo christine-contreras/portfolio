@@ -3,7 +3,7 @@ import { Button } from "@mui/material"
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 import { useSpring, animated, config } from "react-spring"
 
-const AnimatedButton = ({ isVisible }) => {
+const AnimatedButton = () => {
   const styles = useSpring({
     config: config.molasses,
     loop: true,
@@ -21,7 +21,7 @@ const AnimatedButton = ({ isVisible }) => {
       component={animated.button}
       style={styles}
     >
-      View Work
+      view work
     </Button>
   )
 }

@@ -65,7 +65,7 @@ const ProjectPreviews = () => {
               fontSize: { lg: "6em" },
             }}
           >
-            Projects
+            projects
           </Typography>
         </Grid>
         <Grid item container>
