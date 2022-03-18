@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby-theme-material-ui"
-import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useSpring, animated, config } from "react-spring"
 import useVisibilitySensor from "@rooks/use-visibility-sensor"
@@ -32,6 +32,11 @@ const ProjectPreview = ({ project }) => {
         pt: 6,
         pb: 10,
       }}
+      component={motion.div}
+      whileHover={{
+        scale: 1.04,
+        transition: { duration: 0.5 },
+      }}
     >
       <Link to={`projects/${project.slug}`} underline="none">
         <Paper
@@ -61,14 +66,6 @@ const ProjectPreview = ({ project }) => {
                 alt={project.title}
                 className="radius-sm"
               />
-              {/* <StaticImage
-                src="../../images/project-previews/project-preview-freespirit.jpg"
-                quality={95}
-                placeholder="blurred"
-                formats={["auto", "webp", "avif"]}
-                alt="Free Spirit Designs Mockup"
-                className="radius-sm"
-              /> */}
             </Grid>
           </Grid>
         </Paper>

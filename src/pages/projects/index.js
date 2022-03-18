@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../containers/Layout"
 import Seo from "../../components/seo"
+import ProjectPreviews from "../../containers/ProjectPreviews"
 import { Grid } from "@mui/material"
 const Projects = ({ data }) => {
   const projects = data.allMarkdownRemark.nodes
@@ -9,9 +10,7 @@ const Projects = ({ data }) => {
     <Layout>
       <Seo title="Projects" />
       <Grid container flexDirection="column" spacing={3} maxWidth="xl">
-        <Grid item>
-          <h1>Projects</h1>
-        </Grid>
+        <ProjectPreviews />
       </Grid>
     </Layout>
   )

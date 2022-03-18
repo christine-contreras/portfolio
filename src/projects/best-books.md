@@ -7,6 +7,4 @@ preview: ../images/project-previews/project-preview-bestbooks.jpg
 feature: ../images/project-previews/project-preview-bestbooks.jpg
 ---
 
-# Best Books
-
 Description here.

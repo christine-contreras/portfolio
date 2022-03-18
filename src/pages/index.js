@@ -9,11 +9,7 @@ const App = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      {/* <Parallax pages={1} style={{ top: 0 }}>
-        <ParallaxLayer offset={0} speed={0.5} className="flex"> */}
       <Hero />
-      {/* </ParallaxLayer>
-      </Parallax> */}
       <ProjectPreviews />
     </Layout>
   )
